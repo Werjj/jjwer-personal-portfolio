@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+    background-color: #fef3c7;
+    /* 这里可以替换成你想要的背景颜色 */
+}
+
+@keyframes intro-scroll {
+    0% {
+        transform: translateY(0);
+        opacity: 0
+    }
+
+    20% {
+        transform: translateY(2px);
+        opacity: 1
+    }
+
+    to {
+        transform: translateY(8px);
+        opacity: 0
+    }
+}
+
+.animate-intro-scroll {
+    animation: intro-scroll 3s ease infinite;
+}
+
+
+html {
+    --line-color: #e5e7eb;
+}
+
+html.dark {
+    --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+    @apply border border-black/10;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d4d4d8;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
